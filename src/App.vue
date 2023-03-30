@@ -1,22 +1,14 @@
 
 <template>
-  <!-- <Header></Header> -->
-  <!-- <Home /> -->
   <router-view />
-  <!-- <test></test> -->
-
 </template>
 
 <script>
-// import test from './components/test.vue'
-// import Home from './components/Home.vue'
-// import Header from './components/Header.vue'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 export default {
   name: 'App',
   components: {
-    // Header
-    // test
+
   }
 }
 </script>
