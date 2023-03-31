@@ -50,17 +50,17 @@ const routes = [
     {
         name: 'manage_subjects',
         component: manage_subjects,
-        path: '/manage_subjects'
+        path: '/manage-subjects'
     },
     {
         name: 'manage_assignment',
         component: manage_assignment,
-        path: '/manage_assignment'
+        path: '/manage-assignment'
     },
     {
         name: 'manage_enroll',
         component: manage_enroll,
-        path: '/manage_enroll'
+        path: '/manage-enroll'
     },
 ];
 
