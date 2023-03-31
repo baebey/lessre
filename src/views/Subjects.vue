@@ -64,17 +64,21 @@
             </div>
         </div>
     </div>
+
+    <!-- footer component -->
+    <Footer></Footer>
     
 </template>
 
 <script>
-// import { onMounted } from 'vue'
+import Footer from '../components/Footer.vue'
 import Header from '../components/Header.vue'
 import subjects from '../assets/json/subjects.json'
 export default {
     name: 'SubjectsPage',
     components: {
-        Header
+        Header,
+        Footer
     },
     data() {
         return {

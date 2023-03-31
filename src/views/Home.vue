@@ -47,22 +47,20 @@
         </div>
     </div>
 
-    <footer class="footer has-background-light">
-        <div class="content has-text-centered" id="tilt">
-            <strong>Halvah pie croissant bear claw candy. Chupa chups marzipan pastry wafer cotton candy dragée. Cheesecake
-                biscuit cake fruitcake brownie oat cake cake chocolate cake.</strong>
-        </div>
-    </footer>
+    <!-- footer component -->
+    <Footer></Footer>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
 import Assignments from '../assets/json/jsonAssignment.json'
 
 export default {
     name: 'HomePage',
     components: {
         Header,
+        Footer,
 
     },
     data() {

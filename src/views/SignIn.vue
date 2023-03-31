@@ -31,11 +31,18 @@
         </div>
         
     </form>
+
+    <!-- footer -->
+    <Footer></Footer>
 </template>
 
 <script>
+import Footer from '../components/Footer.vue'
 export default {
     name: 'SignIn',
+    components: {
+        Footer
+    },
     methods: {
         signIn() {
             alert("Sign in!")

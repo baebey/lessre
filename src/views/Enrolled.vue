@@ -113,6 +113,10 @@
 
         </div>
     </div>
+
+    <!-- footer -->
+    <Footer></Footer>
+    
     <!-- modal add -->
     <div id="mali" class="modal has-background-white" :class="{ 'is-active': showAddModalFlag }">
         <div class="modal-background"></div>
@@ -398,10 +402,12 @@
 <script>
 import Header from '../components/Header.vue'
 import Enrolled from '../assets/json/Enrolled.json'
+import Footer from '../components/Footer.vue'
 export default {
     name: 'EnrolledPage',
     components: {
-        Header
+        Header,
+        Footer,
     },
     data() {
         return {

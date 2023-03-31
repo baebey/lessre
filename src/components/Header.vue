@@ -62,7 +62,7 @@
 <script>
 
 export default {
-    name: 'HeaderPage',
+    name: 'HeaderComponent',
     methods: {
         backHome() {
             this.$router.push({ name: "Home" })

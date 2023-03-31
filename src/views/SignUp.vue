@@ -45,11 +45,21 @@
                 Up!</button>
         </div>
     </form>
+
+    <!-- footer -->
+    <Footer></Footer>
+
+
 </template>
 
 <script>
+import Footer from '../components/Footer.vue'
 export default {
+    
     name: 'SignUp',
+    components: {
+        Footer
+    },
     data() {
         return {
             fname: null,

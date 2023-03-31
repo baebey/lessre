@@ -102,6 +102,9 @@
         </div>
     </div>
 
+    <!-- footer -->
+    <Footer></Footer>
+
     <!-- modal add -->
     <div id="mali" class="modal has-background-white" :class="{ 'is-active': showModalFlag }">
         <div class="modal-background"></div>
@@ -201,12 +204,14 @@
 
 <script>
 import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
 import Assignments from '../assets/json/jsonAssignment.json'
 export default {
     name: 'AssignmentPage',
     el: "#modalAssignment",
     components: {
-        Header
+        Header,
+        Footer
     },
     data() {
         return {

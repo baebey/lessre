@@ -1,6 +1,6 @@
 <template>
     <Header></Header>
-    <div id="mali" class="container is-fluid px-6 ">
+    <div id="mali" class="container is-fluid px-6 mb-6">
         <div class="notification is-white">
 
             <label class="label is-size-2 mb-0 pl-6">My Profile</label>
@@ -61,14 +61,20 @@
 
         </div>
     </div>
+
+
+    <!-- footer -->
+    <Footer></Footer>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
 export default {
     name: 'AccountPage',
     components: {
         Header,
+        Footer,
 
     },
 }
