@@ -71,9 +71,9 @@
                                                 <div class="field has-addons">
                                                     <label class="label is-size-6 mr-4">สอบกลางภาค: {{ enr.midterm }}</label>
                                                     <label class="label is-size-6 mr-auto">สอบปลายภาค: {{ enr.final }}</label>
-                                                    <span class="icon mt-5 mr-1">
+                                                    <span class="icon is-medium mt-5 mr-1">
 
-                                                        <a @click="showEditModal" class="fa-regular fa-pen-to-square"></a>
+                                                        <a @click="showEditModal" class="fa-regular fa-pen-to-square fa-lg"></a>
 
                                                     </span>
                                                 </div>

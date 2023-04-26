@@ -2,12 +2,28 @@
     <Header></Header>
     <div class="container is-fluid mt-3" id="mali">
         <div class="notification has-background-white">
-            <label class="label is-size-2 has-text-centered">My Assignment</label>
-            <button @click="showModal" class="button is-info mr-5 is-pulled-right" id="mali">Add
+            <label class="label is-size-2 has-text-centered mb-6">My Assignment</label>
+
+
+            <button @click="showModal" class="button is-info mr-5 is-pulled-right" id="mali" style="margin-top: -30px;">Add
                 Assignment</button>
 
+                <div class="select mr-3 is-pulled-right" style="margin-top: -30px;">
+                <select id="mali">
+                    <option value="all">เลือกเทอมที่ส่ง</option>
+                    <option value="11">ปี 1/1</option>
+                    <option value="12">ปี 1/2</option>
+                    <option value="21">ปี 2/1</option>
+                    <option value="22">ปี 2/2</option>
+                    <option value="31">ปี 3/1</option>
+                    <option value="32">ปี 3/2</option>
+                    <option value="41">ปี 4/1</option>
+                    <option value="42">ปี 4/2</option>
+                </select>
+            </div>
 
-            <br><br><br>
+
+            <br><br>
 
             <div class="tile is-ancestor" style="margin-top: -30px;">
                 <div class="tile is-vertical is-8">
@@ -27,9 +43,9 @@
                                     <label class="label is-size-5 ">{{ nst.asm_name }}</label>
                                     <label class="label is-size-6 has-text-grey">กำหนดส่ง : {{ nst.deadline }}</label>
 
-                                    <span class="icon mt-1">
+                                    <span class="icon is-medium mt-1">
 
-                                        <a @click="showEditModal" class="fa-regular fa-pen-to-square"></a>
+                                        <a @click="showEditModal" class="fa-regular fa-pen-to-square fa-lg"></a>
 
                                     </span>
 
@@ -54,8 +70,8 @@
                                 <div class="box has-background-warning-light" v-for="wip in Doing" :key="wip.number">
                                     <label class="label is-size-5 ">{{ wip.asm_name }}</label>
                                     <label class="label is-size-6 has-text-grey">กำหนดส่ง : {{ wip.deadline }}</label>
-                                    <span class="icon mt-1">
-                                        <a @click="showEditModal" class="fa-regular fa-pen-to-square"></a>
+                                    <span class="icon is-medium mt-1">
+                                        <a @click="showEditModal" class="fa-regular fa-pen-to-square fa-lg"></a>
                                     </span>
                                     <progress class="progress is-small is-warning mt-3" max="100"></progress>
                                 </div>
@@ -81,9 +97,9 @@
                             <label class="label is-size-5 ">{{ fns.asm_name }}</label>
                             <label class="label is-size-6 has-text-grey">กำหนดส่ง : {{ fns.deadline }}</label>
 
-                            <span class="icon mt-1">
+                            <span class="icon is-medium mt-1">
 
-                                <i class="fa-solid fa-crown"></i>
+                                <i class="fa-solid fa-crown fa-lg"></i>
 
                             </span>
 
@@ -115,36 +131,72 @@
             </header>
             <section class="modal-card-body">
                 
-                    <div class="field">
-                        <label class="label is-size-5 is-pulled-left has-text-primary-dark">ชื่องาน/คำอธิบาย</label>
-                        <div class="control">
-                            <input class="input is-primary" type="text" placeholder="ชื่องานหรือคำอธิบายเกี่ยวกับงาน"
-                                id="mali">
-                        </div>
+                <div class="field">
+                    <label class="label is-size-5 is-pulled-left has-text-primary-dark">ชื่องาน</label>
+                    <div class="control">
+                        <input class="input is-primary" type="text" placeholder="ชื่อของงาน"
+                            id="mali">
                     </div>
+                </div>
 
-                    <div class="field">
-                        <label class="label is-size-5 is-pulled-left has-text-link-dark">กำหนดส่ง</label>
-                        <div class="control">
-                            <input class="input is-link" type="date" placeholder="กำลังส่ง"
-                                id="mali">
-                        </div>
+                <div class="field">
+                    <label class="label is-size-5 is-pulled-left has-text-primary-dark">คำอธิบายงาน</label>
+                    <div class="control">
+                        <input class="input is-primary" type="text" placeholder="คำอธิบายเกี่ยวกับงาน"
+                            id="mali">
                     </div>
+                </div>
 
-                    <div class="field">
-                        <label class="label is-size-5 is-pulled-left has-text-info-dark">สถานะของงาน</label>
-                        <br><br>
-                        <div class="select is-info is-pulled-left" id="mali">
-                            <select id="mali">
-                                <option>สถานะของงาน</option>
-                                <option>ยังไม่เริ่มทำ</option>
-                                <option>กำลังทำ</option>
-                                <option>งานเสร็จสิ้น</option>
-                            </select>
-                        </div>
+                <div class="field">
+                    <label class="label is-size-5 is-pulled-left has-text-primary-dark">รหัสวิชา</label>
+                    <div class="control">
+                        <input class="input is-primary" type="text" placeholder="รหัสวิชาของงาน"
+                            id="mali">
                     </div>
+                </div>
 
-            </section>
+                <div class="field">
+                    <label class="label is-size-5 is-pulled-left has-text-link-dark">กำหนดส่ง</label>
+                    <div class="control">
+                        <input class="input is-link" type="date" placeholder="กำลังส่ง"
+                            id="mali">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label is-size-5 is-pulled-left has-text-info-dark">เลือกเทอมที่ส่ง</label>
+                    <br><br>
+                    <div class="select is-info" id="mali">
+                        <select id="mali">
+                            <option value="all">เลือกเทอมที่ส่ง</option>
+                            <option value="11">ปี 1/1</option>
+                            <option value="12">ปี 1/2</option>
+                            <option value="21">ปี 2/1</option>
+                            <option value="22">ปี 2/2</option>
+                            <option value="31">ปี 3/1</option>
+                            <option value="32">ปี 3/2</option>
+                            <option value="41">ปี 4/1</option>
+                            <option value="42">ปี 4/2</option>
+                        </select>
+                    </div>
+                </div>
+
+    
+
+                <div class="field">
+                    <label class="label is-size-5 is-pulled-left has-text-info-dark">สถานะของงาน</label>
+                    <br><br>
+                    <div class="select is-info" id="mali">
+                        <select id="mali">
+                            <option>สถานะของงาน</option>
+                            <option>ยังไม่เริ่มทำ</option>
+                            <option>กำลังทำ</option>
+                            <option>งานเสร็จสิ้น</option>
+                        </select>
+                    </div>
+                </div>
+
+        </section>
             <footer class="modal-card-foot">
                 <button @click="okModal" class="button is-success" id="mali">Submit</button>
                 <button @click="cancelModal" class="button is-danger" id="mali">Cancel</button>
@@ -164,12 +216,28 @@
             <section class="modal-card-body">
                 
                     <div class="field">
-                        <label class="label is-size-5 is-pulled-left has-text-primary-dark">ชื่องาน/คำอธิบาย</label>
+                        <label class="label is-size-5 is-pulled-left has-text-primary-dark">ชื่องาน</label>
                         <div class="control">
-                            <input class="input is-primary" type="text" placeholder="ชื่องานหรือคำอธิบายเกี่ยวกับงาน"
+                            <input class="input is-primary" type="text" placeholder="ชื่อของงาน"
                                 id="mali">
                         </div>
                     </div>
+
+                    <div class="field">
+                        <label class="label is-size-5 is-pulled-left has-text-primary-dark">คำอธิบายงาน</label>
+                        <div class="control">
+                            <input class="input is-primary" type="text" placeholder="คำอธิบายเกี่ยวกับงาน"
+                                id="mali">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                    <label class="label is-size-5 is-pulled-left has-text-primary-dark">รหัสวิชา</label>
+                    <div class="control">
+                        <input class="input is-primary" type="text" placeholder="รหัสวิชาของงาน"
+                            id="mali">
+                    </div>
+                </div>
 
                     <div class="field">
                         <label class="label is-size-5 is-pulled-left has-text-link-dark">กำหนดส่ง</label>
@@ -180,9 +248,29 @@
                     </div>
 
                     <div class="field">
+                        <label class="label is-size-5 is-pulled-left has-text-info-dark">เลือกเทอมที่ส่ง</label>
+                        <br><br>
+                        <div class="select is-info" id="mali">
+                            <select id="mali">
+                                <option value="all">เลือกเทอมที่ส่ง</option>
+                                <option value="11">ปี 1/1</option>
+                                <option value="12">ปี 1/2</option>
+                                <option value="21">ปี 2/1</option>
+                                <option value="22">ปี 2/2</option>
+                                <option value="31">ปี 3/1</option>
+                                <option value="32">ปี 3/2</option>
+                                <option value="41">ปี 4/1</option>
+                                <option value="42">ปี 4/2</option>
+                            </select>
+                        </div>
+                    </div>
+
+        
+
+                    <div class="field">
                         <label class="label is-size-5 is-pulled-left has-text-info-dark">สถานะของงาน</label>
                         <br><br>
-                        <div class="select is-info is-pulled-left" id="mali">
+                        <div class="select is-info" id="mali">
                             <select id="mali">
                                 <option>สถานะของงาน</option>
                                 <option>ยังไม่เริ่มทำ</option>
@@ -193,6 +281,7 @@
                     </div>
 
             </section>
+            
             <footer class="modal-card-foot">
                 <button @click="okModal" class="button is-success" id="mali">Submit</button>
                 <button @click="cancelModal" class="button is-danger" id="mali">Cancel</button>
