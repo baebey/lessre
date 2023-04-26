@@ -73,7 +73,8 @@
                                                     <label class="label is-size-6 mr-auto">สอบปลายภาค: {{ enr.final }}</label>
                                                     <span class="icon is-medium mt-5 mr-1">
 
-                                                        <a @click="showEditModal" class="fa-regular fa-pen-to-square fa-lg"></a>
+                                                        <a @click="showEditModal" class="fa-regular fa-pen-to-square fa-lg mr-3"></a>
+                                                        <a class="fa-solid fa-trash-can fa-lg mr-2"></a>
 
                                                     </span>
                                                 </div>
@@ -96,7 +97,7 @@
                             <div class="content">
                                 <label class="label is-size-6">จำนวนหน่วยกิตที่ต้องลง: {{ totalCredits }}</label>
                                 <label class="label is-size-6">จำนวนหน่วยกิตที่ลงแล้ว: {{ sumAllCredits }}</label>
-                                <label class="label is-size-6 mb-6">จำนวนวิชา: {{ Enrolled.length }}</label>
+                                <label class="label is-size-6 mb-6">จำนวนวิชาที่ลงแล้ว: {{ Enrolled.length }}</label>
 
                                 <button @click="showAddModal" class="button is-fullwidth mb-4 is-success" id="mali">Add
                                     Enroll</button>
