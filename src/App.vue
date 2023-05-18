@@ -4,12 +4,14 @@
 </template>
 
 <script>
+
 import '@fortawesome/fontawesome-free/css/all.min.css'
 export default {
   name: 'App',
   components: {
 
-  }
+  },
+  
 }
 </script>
 
@@ -18,13 +20,9 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mali:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
 #app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  /* color: #2c3e50; */
   user-select: none;
 
 
@@ -43,6 +41,9 @@ export default {
 
 #tilt{
   font-family: 'Tilt Neon', cursive;
+}
+#noto{
+  font-family: 'Noto Sans JP', sans-serif;
 }
 </style>
 

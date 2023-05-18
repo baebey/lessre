@@ -74,7 +74,7 @@
                                                     <span class="icon is-medium mt-5 mr-1">
 
                                                         <a @click="showEditModal" class="fa-regular fa-pen-to-square fa-lg mr-3"></a>
-                                                        <a class="fa-solid fa-trash-can fa-lg mr-2"></a>
+                                                        <a @click="showDelTrashModal" class="fa-solid fa-trash-can fa-lg mr-2"></a>
 
                                                     </span>
                                                 </div>
@@ -125,7 +125,7 @@
             <header class="modal-card-head ">
                 <p class="modal-card-title is-size-3 ml-1 py-3" id="mali"><strong>Add
                         Enroll</strong></p>
-                <button class="delete" aria-label="close" @click="cancelModal"></button>
+                
             </header>
             <section class="modal-card-body">
 
@@ -211,7 +211,31 @@
         </div>
     </div>
 
-    <!-- modal del -->
+    <!-- modal del trash -->
+
+    <div id="mali" class="modal has-background-white" :class="{ 'is-active': showDelTrashModalFlag }">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head ">
+                <p class="modal-card-title is-size-3 ml-1 py-3" id="mali">
+                    <strong>Confirm Delete Enroll</strong>
+                </p>
+                
+            </header>
+
+            <section class="modal-card-body">
+                <label class="label is-pulled-left is-size-5">คุณยืนยันจะลบ วิชา ... จริง ๆ ใช่ไหม</label>
+            </section>
+            
+            <footer class="modal-card-foot">
+                <button @click="okModal" class="button is-success" id="mali">Submit</button>
+                <button @click="cancelModal" class="button is-danger" id="mali">Cancel</button>
+
+            </footer>
+        </div>
+    </div>
+
+    <!-- modal del enroll-->
 
     <div id="mali" class="modal has-background-white" :class="{ 'is-active': showDelModalFlag }">
         <div class="modal-background"></div>
@@ -220,7 +244,7 @@
                 <p class="modal-card-title is-size-3 ml-1 py-3" id="mali">
                     <strong>Delete Enroll</strong>
                 </p>
-                <button class="delete" aria-label="close" @click="cancelModal">></button>
+                
             </header>
             <section class="modal-card-body">
 
@@ -313,7 +337,7 @@
             <header class="modal-card-head ">
                 <p class="modal-card-title is-size-3 ml-1 py-3" id="mali"><strong>Edit
                         Enroll</strong></p>
-                <button class="delete" aria-label="close" @click="cancelModal"></button>
+                
             </header>
             <section class="modal-card-body">
 
@@ -415,6 +439,7 @@ export default {
             showAddModalFlag: false,
             showDelModalFlag: false,
             showEditModalFlag: false,
+            showDelTrashModalFlag: false,
             okPressed: false,
             totalCredits: 130,
             Enrolled: Enrolled,
@@ -473,6 +498,10 @@ export default {
                 this.semester = "ทั้งหมด"
             }
         },
+        showDelTrashModal(){
+            this.okPressed = false;
+            this.showDelTrashModalFlag = true;
+        },
         showAddModal() {
             this.okPressed = false;
             this.showAddModalFlag = true;
@@ -490,12 +519,14 @@ export default {
             this.showAddModalFlag = false;
             this.showDelModalFlag = false;
             this.showEditModalFlag = false;
+            this.showDelTrashModalFlag = false;
 
         },
         cancelModal() {
             this.okPressed = false;
             this.showAddModalFlag = false;
             this.showDelModalFlag = false;
+            this.showDelTrashModalFlag = false;
             this.showEditModalFlag = false;
         }
     },
